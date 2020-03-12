@@ -1,0 +1,24 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
+main {
+    font-family: 'Inter UI', sans-serif;
+    margin-left: 6.4rem;
+    padding: 0;
+    background-color: rgb(246, 250, 255);
+}
+
+#inner {
+    border-radius: 1.5rem;
+    background-color: rgb(232, 235, 238);
+}
+
+#outer {
+    border-radius: 1.5rem;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    main {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,17 @@
+<%- include ("partials/header") %>
+
+<main>
+    <h1>This will be the all courses!!!</h1>
+    <div class="border border-success">
+        <% courses.forEach((course)=>{ %>
+        <!-- <% for(var i=0;i<courses.length;i++){ %>                     
+            <% } %> -->
+        <h3><%= course.name %></h3>
+        <a href="/all/<%= course._id %>"><button class="btn btn-primary">Add!</button></a>
+        <% }) %>
+
+
+    </div>
+</main>
+
+<%- include ("partials/footer") %>
