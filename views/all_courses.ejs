@@ -1,16 +1,32 @@
 <%- include ("partials/header") %>
 
-<main>
-    <h1>This will be the all courses!!!</h1>
-    <div class="border border-success">
-        <% courses.forEach((course)=>{ %>
-        <!-- <% for(var i=0;i<courses.length;i++){ %>                     
-            <% } %> -->
-        <h3><%= course.name %></h3>
-        <a href="/all/<%= course._id %>"><button class="btn btn-primary">Add!</button></a>
+<main class="mt-4">
+    <div id="all">
+        <div class="inner m-2">
+            <h1 style="font-family: 'Open Sans';">All our courses</h1>
+            <h3 style="font-size: 22px;
+                letter-spacing: 0.016em;
+                line-height: 2;
+                font-weight: 500;" class="pd-1">Go ahead add them to your dashboard</h3>
+
+        </div>
+    </div>
+    <!-- =================================== -->
+    <div class="row">
+        <% courses.forEach(function(course){ %>
+        <div class="col-lg-3 col-12 col-sm-6  p-4">
+            <div class="neu-div p-2" style="width: 100%; border-radius: 1.5rem ;">
+                <div class="cimg p-3">
+                    <img src="<%= course.image %>" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body mt-3">
+                    <h5 class="card-title"><%= course.name %></h5>
+                    <p class="card-text"><%= course.type %> </p>
+                    <a href="/all/<%= course._id %>" class="learn-btn">Enroll</a>
+                </div>
+            </div>
+        </div>
         <% }) %>
-
-
     </div>
 </main>
 

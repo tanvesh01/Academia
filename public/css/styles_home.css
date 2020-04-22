@@ -1,0 +1,167 @@
+body {
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 0.08em;
+}
+
+#logo {
+    font-size: 4rem;
+    letter-spacing: 0.6ch;
+    font-style: normal;
+    font-weight: 100;
+    background: rgb(255, 111, 216);
+    background: linear-gradient(
+        144deg,
+        rgba(255, 111, 216, 1) 19%,
+        rgba(56, 19, 194, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+section {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cover {
+    position: absolute;
+    background-color: white;
+    height: 60%;
+    width: 100%;
+    z-index: 2;
+    top: -60%;
+}
+
+.content {
+    background-color: #161516;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome_text {
+    width: 150px;
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.welcome_text h1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -100%;
+    color: white;
+    font-size: 2.5rem;
+    padding-left: 3rem;
+}
+
+.main_content {
+    width: 60%;
+    color: white;
+    display: none;
+}
+
+.main_content h1,
+p {
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-item {
+    margin: 3rem;
+    width: 80%;
+    border-radius: 1rem;
+    background: rgb(255, 111, 216);
+    background: linear-gradient(
+        144deg,
+        rgba(255, 111, 216, 1) 19%,
+        rgba(56, 19, 194, 1) 100%
+    );
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: white;
+    text-decoration: none;
+    /* filter: grayscale(100%) opacity(0.7); */
+}
+
+.link-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    /* padding-left: 50%;
+    margin-top: ; */
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+#welcome {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 3.82px;
+}
+
+#love {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 3.08px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main_content {
+        width: 85%;
+    }
+
+    #logo {
+        font-size: 3.7rem;
+        line-height: 0.9;
+        letter-spacing: 0ch;
+    }
+
+    .nav-item {
+        margin: 1rem;
+    }
+
+    #welcome {
+        font-weight: 700;
+        padding: 0;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+
+    #love {
+        letter-spacing: 1.19px;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+}

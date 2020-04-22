@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Academia Team",
+  "author": "Academia",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "mongoose": "^5.9.3",
+    "node-async-loop": "^1.2.2",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1"

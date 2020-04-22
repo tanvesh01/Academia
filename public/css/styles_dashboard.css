@@ -1,19 +1,45 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
+.row {
+    margin: 0;
+}
+
+#empty_container {
+    text-align: center;
+}
+
+#empty {
+    display: inline-block;
+    font-size: 2.4rem;
+}
+
 main {
-    font-family: 'Inter UI', sans-serif;
+    font-family: 'Open Sans';
     margin-left: 6.4rem;
     padding: 0;
-    background-color: rgb(246, 250, 255);
+    background-color: #cfdcea;
+}
+
+#pic {
+    border-radius: 1.5rem;
+    width: 300px;
+    height: auto;
+    z-index: -1;
 }
 
 #inner {
     border-radius: 1.5rem;
-    background-color: rgb(232, 235, 238);
+    background: #dee8f4;
+    box-shadow: inset 5px 5px 10px #bdc5cf,
+        inset -5px -5px 10px #ffffff;
+    padding: 1rem;
 }
 
 #outer {
     border-radius: 1.5rem;
+    background: #dee8f4;
+    box-shadow: 5px 5px 10px #bdc5cf,
+        -5px -5px 10px #ffffff;
 }
 
 /* Small screens */
@@ -21,4 +47,25 @@ main {
     main {
         margin-left: 0;
     }
+
+    #inner {
+        padding: 0.5rem;
+    }
+
+    #w1 {
+        font-size: 1.3rem;
+    }
+
+    #w2 {
+        font-size: 1rem;
+    }
+
+    #welcome {
+        font-size: 1.5rem;
+    }
+
+    #pic {
+        width: 150px;
+    }
+
 }

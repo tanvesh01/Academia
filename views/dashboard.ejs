@@ -1,37 +1,56 @@
 <%- include ("partials/header") %>
-<main class="border mt-5 mr-4 shadow-lg" id="outer">
-  <div class="container-fluid mt-4 mb-4 px-4">
-    <div class="d-flex  justify-content-around p-4" id="inner">
-      <div class="border">
-        <img src="test.jpg" id="pic" class="" />
-      </div>
-      <div>
-        One of three columns
-      </div>
-      <div>
-        One of three columns
-      </div>
+<main class="border mt-5 mr-4" id="outer">
+    <div class="container-fluid mt-4 mb-4 px-4">
+        <div class="row" id="inner">
+            <div class="border col-md-3">
+                <img src="test.jpg" id="pic" />
+            </div>
+            <div class="col-md-9">
+                <h1 id="welcome">Welcome back <strong><%=name%>!</strong></h1>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <% courses.forEach(function(course){ %>
-    <div class="col-lg-4 col-12 col-sm-6  p-5">
+    <% if (courses.length != 0) { %>
+    <div class="row">
+        <% courses.forEach(course =>{ %>
+        <div class="col-lg-3 col-12 col-sm-6 p-4">
+            <div class="neu-div p-2" style="width: 100%; border-radius: 1.5rem;">
+                <div class="cimg p-3">
+                    <img src="<%= course.image %>" class="card-img-top" alt="..." />
+                </div>
+                <div class="card-body mt-3">
+                    <h5 class="card-title"><%= course.name %></h5>
+                    <p class="card-text"><%= course.type %></p>
+                    <a href="/all/<%= course._id %>" class="learn-btn">Learn!</a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <% } else { %>
+    <div id="empty_container">
+        <div id="empty">
+            <h1 id="w1">You have not added any courses yet!</h1>
+            <h3 id="w2">Go to the all tab to view all of our courses.</h3>
+        </div>
+    </div>
+    <% } %>
+</main>
+
+<%- include ("partials/footer") %>
+
+<!-- <div class="col-lg-3 col-12 col-sm-6 p-4">
       <div class="card" style="width: 100%; border-radius: 1.5rem ;">
-        <img src="<%= course.image %>" style="
+        <img src="" style="
         border-radius: 1.5rem;
         -webkit-box-shadow: 0px 20px 18px 0px rgba(194,180,194,1);
         -moz-box-shadow: 0px 20px 18px 0px rgba(194,180,194,1);
         box-shadow: 0px 20px 18px 0px rgba(194,180,194,1);" class="card-img-top" alt="...">
         <div class="card-body mt-3">
-          <h5 class="card-title"><%= course.name %></h5>
+          <h5 class="card-title"><></h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-    </div>
-    <% }) %>
-  </div>
-</main>
-
-<%- include ("partials/footer") %>
+    </div> -->
