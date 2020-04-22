@@ -168,8 +168,12 @@ app.get("/all/:id", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("Academia has started!!");
+// app.listen(3000, () => {
+//     console.log("Academia has started!!");
+// });
+
+app.listen(process.env.PORT, process.env.IP, function () {
+    console.log("This shit started!!!!!!");
 });
 
 // Course.create({
