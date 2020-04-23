@@ -47,6 +47,24 @@ passport.deserializeUser(User.deserializeUser());
 
 // Course.create(
 //     {
+//         name: "6.046-Intro to algorithms",
+//         link:
+//             "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/",
+//         image:
+//             "https://pbs.twimg.com/profile_images/912676696620359680/e-G5lqVs_400x400.jpg",
+//         type: "Video lectures",
+//     },
+//     function (err, course) {
+//         if (err) {
+//             console.lof(err);
+//         } else {
+//             console.log(course);
+//         }
+//     }
+// );
+
+// Course.create(
+//     {
 //         name: "CS50 lectures by Stanford University",
 //         link:
 //             "https://www.youtube.com/playlist?list=PLhQjrBD2T381L3iZyDTxRwOBuUt6m1FnW",
@@ -190,25 +208,10 @@ app.get("/all/:id", (req, res) => {
     });
 });
 
-// app.listen(3000, () => {
-//     console.log("Academia has started!!");
-// });
-
-app.listen(process.env.PORT, process.env.IP, function () {
-    console.log("This shit started!!!!!!");
+app.listen(3000, () => {
+    console.log("Academia has started!!");
 });
 
-// Course.create({
-//     name: "CS50 lectures by Stanford University",
-//     link: "https://www.youtube.com/playlist?list=PLhQjrBD2T381L3iZyDTxRwOBuUt6m1FnW",
-//     image: "https://prod-discovery.edx-cdn.org/media/course/image/0c675c29-54ee-42ff-ac95-01f53450bc8b-aaffd76ac491.small.jpg",
-//     type: "Video lectures"
-//   },
-//   function (err, course) {
-//     if (err) {
-//       console.lof(err);
-//     } else {
-//       console.log(course);
-//     }
-//   }
-// );
+// app.listen(process.env.PORT, process.env.IP, function () {
+//     console.log("This shit started!!!!!!");
+// });
