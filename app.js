@@ -8,6 +8,14 @@ var express = require("express"),
     User = require("./modals/User"),
     asyncLoop = require("node-async-loop");
 
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    })
+);
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+
 mongoose
     .connect(
         "mongodb+srv://tanvesh01:dedsec01@academia-wysgv.mongodb.net/test?retryWrites=true&w=majority",
@@ -22,18 +30,6 @@ mongoose
     .catch((err) => {
         console.log("ERROR:", err.message);
     });
-// function () {
-//     console.log("connected");
-// }
-
-app.use(
-    bodyParser.urlencoded({
-        extended: true,
-    })
-);
-app.use(express.static("public"));
-app.set("view engine", "ejs");
-
 // Passport Config
 app.use(
     require("express-session")({
